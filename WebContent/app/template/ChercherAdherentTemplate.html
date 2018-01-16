@@ -1,0 +1,26 @@
+<div class="main">
+
+	<form name="form" class="css-form" novalidate>
+	
+	 	<div class="form-group">
+			    <label for="name">Pr&eacute;nom</label>
+			    <input type="text" class="form-control" id="firstname" name="firstname"  data-ng-model="firstname">
+			    
+			    
+		  </div>
+		  
+		<div class="form-group">
+			    <label for="name">Nom</label>
+			    <input type="text" class="form-control" id="name" name="name"  data-ng-model="name">
+			    
+			    
+		  </div>
+		  
+		  
+		  
+		  
+		  <button ng-click="search(name, firstname)" ng-disabled="form.$invalid || isUnchanged(user)" class="btn btn-info">OK</button>
+		  
+	</form> 
+	  
+</div>

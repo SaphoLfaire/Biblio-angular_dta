@@ -1,0 +1,97 @@
+
+<div class="main">
+
+<h1>Cr&eacute;ation d'un adh&eacute;rent</h1>
+
+	<form name="form" class="css-form" novalidate>
+
+  	  
+	  
+	   <div class="form-group">
+		    <label for="name">Pr&eacute;nom</label>
+		    <input type="text" class="form-control" id="firstname" name="prenom" ng-model="user.prenom">
+		    
+	  </div>
+	  
+	  <div class="form-group">
+		    <label for="name">Nom</label>
+		    <input type="text" class="form-control" id="name" name="nom" ng-model="user.nom">
+		    
+		    
+	  </div>
+	  
+	  <div class="form-group">
+		    <label for="name">Date de naissance</label>
+		    <input type="date" class="form-control" id="naissance" name="birdht" ng-model="user.date_naissance">
+		    
+		    
+	  </div>
+	  
+	  
+	 <div class="form-group">
+	      <label class=" control-label" for="inputSuccess">Email</label>
+	      <div >
+		        <input class="form-control" id="inputSuccess" type="email" name="uEmail" ng-model="user.email") required>
+		        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+	      </div>
+	  </div>
+	  
+	   <div class="form-group">
+		    Est-ce que c'est votre num&eacute;ro de t&eacute;l&eacute;phone ?
+		    {{randomTel}}
+		    <div class="btn-group ">
+				  <button class="btn btn-info">Oui</button>
+				  <button ng-click="relancerRandom() " class="btn btn-info">Non</button>
+			  
+			</div> <br>
+		    
+		    
+	  </div>
+	  
+	   <div class="form-group">
+		    <label for="name">Adresse (voie et rue)</label>
+		    <input type="text" class="form-control" id="adress" name="adress" ng-model="user.adresse.ligne1">
+		    
+		    
+	  </div>
+	  
+	   <div class="form-group">
+		    <label for="name">Compl&eacute;ment</label>
+		    <input type="text" class="form-control" id="adress" name="adress" ng-model="user.adresse.ligne2">
+		    
+		    
+	  </div>
+	  
+	   <div class="form-group">
+		    <label for="name">Ville</label>
+		    <input type="text" class="form-control" id="city" name="city" ng-model="user.adresse.ville")>
+		    
+		    
+	  </div>
+	  
+	   <div class="form-group">
+		    <label for="name">Code postale</label>
+		    <input type="number" class="form-control" id="code" name="code" ng-model="user.adresse.codepostal">
+		    
+		    
+	  </div>
+	  
+	  
+	  <div class="radio form-group">
+		  <label><input type="radio" name="optradio" >Je m'engage &agrave; verser 20&euro; de cotisation.</label>
+	  </div>
+	  
+	  <button ng-click="runCreation(user)"	ng-disabled="form.$invalid || isUnchanged(user)" class="btn btn-info">OK</button>
+	  
+	 
+	  
+	  <div ng-show="form.uEmail.$dirty && form.uEmail.$invalid">
+			Invalid: 
+			<span ng-show="form.uEmail.$error.required">Une adresse mail est requise.</span> 
+			<span ng-show="form.uEmail.$error.email">Votre adresse mail n'est pas valide.</span>
+		</div>
+	  
+	  
+</form> 
+
+</div>

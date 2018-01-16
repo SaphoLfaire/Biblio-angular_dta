@@ -1,0 +1,26 @@
+
+<div ng-if="edit">
+	<div ng-include="'./template/ModifAdherentTemplate.html'" class="main"></div>
+</div>
+
+<div ng-if="!edit">
+<div class="main">
+<h1>{{adherent.prenom}} {{adherent.nom}}</h1>
+
+	<div class="btn-group icone">
+		<button ng-click="modif()" class="btn btn-info"><i class="glyphicon glyphicon-pencil"></i></button>
+	 	
+	 	<a data-ng-href="#!/DetailsAdherent/{{randomPageNotFound}}" class="btn btn-info" role="button"><i class="glyphicon glyphicon-trash"></i></a>
+	</div>
+	
+<pre>{{adherent|json}}</pre>
+
+<div class="btn-group ">
+  <a data-ng-href="#!/" class="btn btn-info" role="button">Retour &agrave; l'accueil </a>
+  <a data-ng-href="#!/ChercherAdherent" class="btn btn-info" role="button">Retour &agrave; la recherche</a>
+  <a data-ng-href="#!/DetailsAdherent/{{randomPageNotFound}}" class="btn btn-info" role="button"><i class="glyphicon glyphicon-gift"></i></a>
+  
+</div> <br>
+
+</div>
+</div>
